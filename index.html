@@ -11,8 +11,9 @@
 
 <body>
     <header>
-	<!-- Add this button to your HTML file -->
-	<button class="open-btn" onclick="toggleSidebar()">☰ Open Menu</button>
+	<!-- Updated button to open the sidebar, and set it to be visible on smaller screens only -->
+		<button class="open-btn" onclick="toggleSidebar()">☰ Open Menu</button>
+
 
         <h1>Your Tech Hub</h1>
         <nav>
@@ -46,19 +47,31 @@
     <footer>
         <p>&copy; 2024 Your Tech Hub | Designed by Your Name</p>
     </footer>
-	<!-- Add this script to your HTML file -->
+<!-- Updated JavaScript code to include media query for larger screens -->
 <script>
     function toggleSidebar() {
-        document.getElementById("sidebar").style.width = document.getElementById("sidebar").style.width === "250px" ? "0" : "250px";
+        var sidebar = document.getElementById("sidebar");
+        sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
 
     // Close the sidebar when clicking outside of it
     window.onclick = function (event) {
-        if (!event.target.matches('.open-btn') && !event.target.matches('.sidebar a')) {
-            document.getElementById("sidebar").style.width = "0";
+        var sidebar = document.getElementById("sidebar");
+        if (!event.target.matches('.open-btn') && !event.target.matches('.sidebar a') && sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
         }
     }
 </script>
+
+<!-- Media Query for larger screens to hide the open-btn -->
+<style>
+    @media screen and (min-width: 601px) {
+        .open-btn {
+            display: none;
+        }
+    }
+</style>
+
 </body>
 
 </html>
