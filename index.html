@@ -51,7 +51,11 @@
 <script>
     function toggleSidebar() {
         var sidebar = document.getElementById("sidebar");
-        sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        if (sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
+        } else {
+            sidebar.style.width = "250px";
+        }
     }
 
     // Close the sidebar when clicking outside of it
@@ -63,14 +67,6 @@
     }
 </script>
 
-<!-- Media Query for larger screens to hide the open-btn -->
-<style>
-    @media screen and (min-width: 601px) {
-        .open-btn {
-            display: none;
-        }
-    }
-</style>
 
 </body>
 
