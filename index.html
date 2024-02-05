@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Technology Website</title>
-    <link rel="stylesheet" href="styles.css">
-	
+    <title>Your Tech Hub</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-	<!-- Updated button to open the sidebar, and set it to be visible on smaller screens only -->
-		<button class="open-btn" onclick="toggleSidebar()">☰ Open Menu</button>
 
-
-        <h1>Your Tech Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h2>Welcome to Your Tech Hub!</h2>
-        <p>Explore the latest in technology, tutorials, and more.</p>
-		<p>Καλησπέρα Στέλιο! </p>
-    </section>
-
-    <!-- Social Media Links -->
-    <section id="social-links">
-        <p>Connect with me:</p>
+<header>
+    <h1>Welcome to Your Tech Hub</h1>
+    <!-- Add this button to open the sidebar -->
+    <button class="open-btn" onclick="toggleSidebar()">☰ Open Menu</button>
+    <!-- Your existing navigation menu -->
+    <nav>
         <ul>
-            <li><a href="https://www.tiktok.com/@yourusername" target="_blank">TikTok</a></li>
-            <li><a href="https://linktr.ee/yourusername" target="_blank">Linktree</a></li>
-            <li><a href="https://www.instagram.com/yourusername/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.skroutz.gr/" target="_blank">Skroutz</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
-    </section>
+    </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2024 Your Tech Hub | Designed by Your Name</p>
-    </footer>
-<!-- Updated JavaScript code to include media query for larger screens -->
+<section>
+    <!-- Your main content section -->
+    <p>Your content goes here...</p>
+</section>
+
+<div id="social-links">
+    <p>Connect with me:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
+</div>
+
+<footer>
+    <!-- Your footer content -->
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+</footer>
+
+<!-- Sidebar HTML -->
+<div id="sidebar" class="sidebar">
+    <a href="#" class="closebtn" onclick="toggleSidebar()">×</a>
+    <a href="#">Home</a>
+    <a href="#">Videos</a>
+    <a href="#">Courses</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- JavaScript to toggle the sidebar -->
 <script>
     function toggleSidebar() {
         var sidebar = document.getElementById("sidebar");
@@ -57,12 +65,11 @@
     // Close the sidebar when clicking outside of it
     window.onclick = function (event) {
         var sidebar = document.getElementById("sidebar");
-        if (event.target.className !== 'open-btn' && event.target.className !== 'sidebar a' && sidebar.style.width === "250px") {
+        if (!event.target.matches('.open-btn') && !event.target.matches('.sidebar a') && sidebar.style.width === "250px") {
             sidebar.style.width = "0";
         }
     }
 </script>
 
 </body>
-
 </html>
