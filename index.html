@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Technology Website</title>
     <link rel="stylesheet" href="styles.css">
+	
 </head>
 
 <body>
     <header>
+	<!-- Add this button to your HTML file -->
+	<button class="open-btn" onclick="toggleSidebar()">☰ Open Menu</button>
+
         <h1>Your Tech Hub</h1>
         <nav>
             <ul>
@@ -42,6 +46,19 @@
     <footer>
         <p>&copy; 2024 Your Tech Hub | Designed by Your Name</p>
     </footer>
+	<!-- Add this script to your HTML file -->
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").style.width = document.getElementById("sidebar").style.width === "250px" ? "0" : "250px";
+    }
+
+    // Close the sidebar when clicking outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.open-btn') && !event.target.matches('.sidebar a')) {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    }
+</script>
 </body>
 
 </html>
