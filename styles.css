@@ -20,11 +20,12 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Make the menu items flex items */
+    justify-content: center; /* Center the menu items */
 }
 
 nav ul li {
-    display: block;
-    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 nav a {
@@ -33,7 +34,6 @@ nav a {
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    display: block; /* Ensures the links take full width on smaller screens */
 }
 
 nav a:hover {
@@ -96,11 +96,18 @@ footer {
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically on smaller screens */
+        align-items: center; /* Center items vertically */
+    }
+
     nav ul li {
-        margin-bottom: 5px;
+        margin-right: 0; /* Remove margin for better spacing */
+        margin-bottom: 10px;
     }
 
     nav a {
+        width: 100%;
         padding: 8px;
     }
 }
