@@ -122,4 +122,8 @@ footer a:hover {
     footer a {
         padding: 8px 10px; /* Adjust padding for smaller screens */
     }
+    
+    footer {
+        flex-direction: row; /* Ensure the buttons are in a row on smaller screens */
+    }
 }
