@@ -96,18 +96,11 @@ footer {
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Stack menu items vertically on smaller screens */
-        align-items: center; /* Center items vertically */
-    }
-
-    nav ul li {
-        margin-right: 0; /* Remove margin for better spacing */
-        margin-bottom: 10px;
-    }
-
     nav a {
-        width: 100%;
-        padding: 8px;
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #social-links a {
+        padding: 10px 10px; /* Adjust padding for smaller screens */
     }
 }
