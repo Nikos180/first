@@ -24,13 +24,13 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    padding: 8px 15px;
+    padding: 8px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -66,14 +66,14 @@ section {
 }
 
 #social-links li {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 #social-links a {
     text-decoration: none;
     color: #fff;
     background-color: #4527A0; /* Purple near Blue */
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 50px;
     display: inline-block;
     transition: background-color 0.3s ease;
@@ -91,4 +91,30 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+
+    #social-links ul {
+        flex-wrap: wrap;
+    }
+
+    #social-links li {
+        margin: 5px;
+    }
+
+    #social-links a {
+        padding: 8px 15px;
+    }
 }
